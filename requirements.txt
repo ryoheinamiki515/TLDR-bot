@@ -1,0 +1,8 @@
+bs4
+requests
+numpy
+nltk
+sklearn
+networkx
+Pillow
+tweepy
