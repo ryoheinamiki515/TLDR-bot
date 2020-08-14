@@ -2,10 +2,8 @@ import tweepy
 from summarizer import create_TLDR
 import time
 
-CONSUMER_KEY = "7x46TKfDMEbDrlWPOJApOndYx"
-CONSUMER_SECRET = "lGYkpKmcPAJ6Zsw4TdUYDhWYNrBetSCw9XoQN6rtNLkmZg1BV6"
-ACCESS_KEY = "1294001999651000321-wDvNHXyLFZx4NF77ZVk8iEUyyQb5ib"
-ACCESS_SECRET = "etLKANfW9NgAjHONhQWhaxJCHNbx9rgQYoCslMmsZwg2p"
+with open("./passwords.txt", "r") as f:
+    CONSUMER_KEY, CONSUMER_SECRET, ACCESS_KEY, ACCESS_SECRET = f.read().splitlines()
 
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
